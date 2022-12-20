@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список сотрудников</title>
+</head>
+<body>
+    <h1>Сотрудники</h1>
+    <ul>
+        {% for employee in object_list %}
+            <li>{{employee.fio}} - {{employee.position}} - {{employee.department}}</li>
+        {% empty %}
+            <li>Записи о сотрудниках отсутствуют</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!--delete.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Удаление сотрудника</title>
+  </head>
+  <body>
+    <h1>Удаление сотрудника</h1>
+    <div>
+      <a href="{% url 'my_control:employee-list' %}">Главная</a>
+    </div>
+    <div>
+      <h2>{{ employee.fio }}</h2>
+      <p>{{ employee.position }}</p>
+      <p>{{ employee.department }}</p>
+      <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Удалить">
+      </form>
+    </div>
+  </body>
+</html>

@@ -153,3 +153,5 @@ dmypy.json
 cython_debug/
 
 django_control/local_settings.py
+
+.idea
